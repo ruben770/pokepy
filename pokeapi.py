@@ -15,6 +15,10 @@ class PokeAPI(object):
         return {
             'name': data.get('name'),
             'image': data.get('sprites', {}).get('front_default'),
+            'height': data.get('height'),
+            'weight': data.get('weight'),
+            'type': data.get('types')[0].get('type',{}).get('name')
+
         }
 
 
